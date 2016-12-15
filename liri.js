@@ -52,7 +52,7 @@ twitter.get('statuses/user_timeline', {screen_name: 'jsala109', count: 20}, func
 
 //function to search Spotify to display results
 function searchSpotify() {
-var value = process.argv[3] || "whats my age again"; // default
+var value = process.argv[3] || "The Sign - Ace of Base"; // default
 spotify.search({ type: 'track', query: value }, function(err, data) {
     if (!err) {
   		console.log("*" + "* " + "Spotify Results" + "*" + "*")

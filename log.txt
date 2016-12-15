@@ -35,4 +35,24 @@
 	"songName": "Yeah!",
 	"previewLink": "https://p.scdn.co/mp3-preview/8a5e4f8dce6b1a957e235185a4677841fcaafe90?cid=null",
 	"Album": "Confessions"
+}{
+	"Artists": "Ty Dolla $ign",
+	"songName": "Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix",
+	"previewLink": "https://p.scdn.co/mp3-preview/70f126c139847335bc03c756c55b80c99892268e?cid=null",
+	"Album": "Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) [Remix Version]"
+}{
+	"Artists": "Ty Dolla $ign",
+	"songName": "Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) - Remix",
+	"previewLink": "https://p.scdn.co/mp3-preview/70f126c139847335bc03c756c55b80c99892268e?cid=null",
+	"Album": "Or Nah (feat. The Weeknd, Wiz Khalifa and DJ Mustard) [Remix Version]"
+}{
+	"Artists": "Usher",
+	"songName": "Yeah!",
+	"previewLink": "https://p.scdn.co/mp3-preview/8a5e4f8dce6b1a957e235185a4677841fcaafe90?cid=null",
+	"Album": "Confessions"
+}{
+	"Artists": "Ace of Base",
+	"songName": "The Sign",
+	"previewLink": "https://p.scdn.co/mp3-preview/177e65fc2b8babeaf9266c0ad2a1cb1e18730ae4?cid=null",
+	"Album": "The Sign (US Album) [Remastered]"
 }
