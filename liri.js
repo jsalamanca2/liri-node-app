@@ -31,13 +31,13 @@ switch(action){
 
 processArgs();
 
-//function to get last 20 tweets from twitter module 
+//function to get last 20 tweets from twitter module, well try for the 20 tweets. 
 function getTweets() { 
 //Create a new Twitter instance
 var twitter = new Twitter(keys.twitterKeys);
 twitter.get('statuses/user_timeline', {screen_name: 'jsala109', count: 20}, function(err, tweets, response){
   if (!err && response.statusCode == 200) {
-  	console.log("*" + "*" + "My Tweets" + "*" + "*")
+  	console.log("*" + "*" + "My SICK ASS Tweets" + "*" + "*")
   	for (var i = 0; i < tweets.length; i++) {
   		console.log(tweets[i].created_at + " " + tweets[i].text)
   	//(TRying for the logging)	logData = [tweets[i].created_at + " " + tweets[i].text + "," + " "];
@@ -61,5 +61,34 @@ spotify.search({ type: 'track', query: value }, function(err, data) {
     }
  });
 }
+//funtion to search OMBD results for movies
+function searchMovie() {
+	var value = process.argv[3] || "Mr. Nobody";
+	var options =  { 
+		url: 'http://www.omdbapi.com/',
+		qs: {
+			t: value,
+			plot: 'short',
+			r: 'json',
+			tomatoes: true
+		}
+	}
+	request(options, function(err, response, body) {
+	if (!err && response.statusCode == 200) {
+		body = JSON.parse(body);
+  		console.log("*" + "*" + "OMDB Results" + "*" + "*")
+		console.log("Title: " + body.Title);
+		console.log("Year: " + body.Year);
+		console.log("IMDB Rating: " + body.imdbRating);
+		console.log("Country: " + body.Country);
+		console.log("Language: " + body.Language);
+		console.log("Plot: " + body.Plot);
+		console.log("Actors :" + body.Actors);
+		console.log("Rotten Tomatoes Rating: " + body.tomatoRating);
+		console.log("Rotten Tomatoes URL: " + body.tomatoURL);
+		//logData = {Title: body.Title, Year: body.Year, ImdbRating: body.imdbRating, Country: body.Country, Language: body.Language, Plot: body.Plot, Actors: body.Actors, rottenTomatoesRating: body.tomatoRating, rottenTomatoesUrl: body.tomatoURL};
 
+}
+})
+}
 
