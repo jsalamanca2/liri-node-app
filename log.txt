@@ -1,0 +1,38 @@
+[
+	"Thu Dec 15 19:49:06 +0000 2016 RT @AssassinsMovie: The unstoppable cast of #AssassinsCreedMovie is ready to show their new film in #NYC. See it in theaters December 21! h…, "
+][
+	"Thu Dec 15 19:48:54 +0000 2016 RT @AssassinsMovie: And now, we fight. Get tickets to see Michael Fassbender in #AssassinsCreedMovie, in theaters next week. https://t.co/e…, "
+][
+	"Thu Dec 15 19:46:14 +0000 2016 RT @OrlandoCitySC: Our 2016 opener ranked among the Top 40 most-attended matches in the United States this year. \n\nRead | https://t.co/rH7K…, "
+][
+	"Thu Dec 15 19:44:17 +0000 2016 Oh snap crackle pop. Rogue One is tonight! Maybe I should leave class early? 😏, "
+][
+	"Thu Dec 15 19:43:35 +0000 2016 Making more tweets to try and be appealing, "
+][
+	"Thu Dec 15 19:42:30 +0000 2016 RT @HistoryInPix: Back to the Future, 1985 https://t.co/ObnkPCdTo1, "
+][
+	"Thu Dec 15 19:42:20 +0000 2016 RT @NatGeo: The illegal trade in mongoose hair for paintbrushes continues in India, despite a 1972 law banning it https://t.co/QVpO2lyBLw, "
+][
+	"Tue Dec 13 21:42:21 +0000 2016 RT @jonbellion: Ugh..... 🔥❤️ https://t.co/JDnTO8h5lu, "
+][
+	"Tue Dec 13 21:41:17 +0000 2016 RT @KanyePosts: relax, u'll graduate, u'll get a job, u'll become an adult, u'll find someone who loves you. u have an entire life. things…, "
+][
+	"Tue Dec 13 19:38:24 +0000 2016 RT @NASA: Our @MarsCuriosity rover has news from Gale Crater on the Red Planet! Tune in at 2:30pm ET to learn more: https://t.co/Kmt6VM0Ah9…, "
+][
+	"Tue Dec 13 19:37:33 +0000 2016 RT @HistoryToLearn: Mark Hamill and Carrie Fisher in Norway in 1979 filming The Empire Strikes Back. https://t.co/2GSKx3lMfn, "
+]{
+	"Title": "Real Genius",
+	"Year": "1985",
+	"ImdbRating": "7.0",
+	"Country": "USA",
+	"Language": "English",
+	"Plot": "Teenage geniuses deal with their abilities while developing a laser.",
+	"Actors": "Val Kilmer, Gabriel Jarret, Michelle Meyrink, William Atherton",
+	"rottenTomatoesRating": "6.6",
+	"rottenTomatoesUrl": "http://www.rottentomatoes.com/m/real_genius/"
+}{
+	"Artists": "Usher",
+	"songName": "Yeah!",
+	"previewLink": "https://p.scdn.co/mp3-preview/8a5e4f8dce6b1a957e235185a4677841fcaafe90?cid=null",
+	"Album": "Confessions"
+}

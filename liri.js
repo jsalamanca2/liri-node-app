@@ -9,6 +9,8 @@ var request = require('request');
 var action = process.argv[2];
 // made for the movie and spotify selection
 var value = process.argv[3];
+//For data log
+var logData = "";
 // Changed to switch case arguments 
 //The cases will tell what function will be run
 function processArgs() {
@@ -40,7 +42,9 @@ twitter.get('statuses/user_timeline', {screen_name: 'jsala109', count: 20}, func
   	console.log("*" + "*" + "My SICK ASS Tweets" + "*" + "*")
   	for (var i = 0; i < tweets.length; i++) {
   		console.log(tweets[i].created_at + " " + tweets[i].text)
-  	//(TRying for the logging)	logData = [tweets[i].created_at + " " + tweets[i].text + "," + " "];
+  	//(TRying for the logging)	
+  	logData = [tweets[i].created_at + " " + tweets[i].text + "," + " "];
+  	writeLog();
   	}
   }
 });
@@ -48,7 +52,7 @@ twitter.get('statuses/user_timeline', {screen_name: 'jsala109', count: 20}, func
 
 //function to search Spotify to display results
 function searchSpotify() {
-var value = process.argv[3] || "what's my age again";
+var value = process.argv[3] || "whats my age again"; // default
 spotify.search({ type: 'track', query: value }, function(err, data) {
     if (!err) {
   		console.log("*" + "* " + "Spotify Results" + "*" + "*")
@@ -56,14 +60,14 @@ spotify.search({ type: 'track', query: value }, function(err, data) {
         console.log('---Song Name: ' + data.tracks.items[0].name);
         console.log('---Preview Link: ' + data.tracks.items[0].preview_url);
         console.log('---Album: ' + data.tracks.items[0].album.name);
-        //logData = {Artists: data.tracks.items[0].artists[0].name, songName: data.tracks.items[0].name, previewLink: data.tracks.items[0].preview_url, Album: data.tracks.items[0].album.name};
-		
+        logData = {Artists: data.tracks.items[0].artists[0].name, songName: data.tracks.items[0].name, previewLink: data.tracks.items[0].preview_url, Album: data.tracks.items[0].album.name};
+		writeLog();
     }
  });
 }
 //funtion to search OMBD results for movies
 function searchMovie() {
-	var value = process.argv[3] || "Mr. Nobody";
+	var value = process.argv[3] || "Mr. Nobody"; //Default if nothing put in
 	var options =  { 
 		url: 'http://www.omdbapi.com/',
 		qs: {
@@ -86,9 +90,9 @@ function searchMovie() {
 		console.log("---Actors :" + body.Actors);
 		console.log("---Rotten Tomatoes Rating: " + body.tomatoRating);
 		console.log("---Rotten Tomatoes URL: " + body.tomatoURL);
-		//logData = {Title: body.Title, Year: body.Year, ImdbRating: body.imdbRating, Country: body.Country, Language: body.Language, Plot: body.Plot, Actors: body.Actors, rottenTomatoesRating: body.tomatoRating, rottenTomatoesUrl: body.tomatoURL};
-
-}
+		logData = {Title: body.Title, Year: body.Year, ImdbRating: body.imdbRating, Country: body.Country, Language: body.Language, Plot: body.Plot, Actors: body.Actors, rottenTomatoesRating: body.tomatoRating, rottenTomatoesUrl: body.tomatoURL};
+		writeLog();
+	}
 })
 }
 //function to read text file and execute arguments
@@ -106,4 +110,15 @@ function readFileExecute() {
 		}
 
 	})
+};
+
+//function to write to a log.txt
+function writeLog() {
+	//readsfiles and returns to data
+	fs.appendFile('log.txt', JSON.stringify(logData, null, "\t"), (err) => {
+	  if ( err ) {
+        console.log('Error occurred: ' + err);
+        return;
+    }
+})
 };
